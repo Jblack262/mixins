@@ -1,0 +1,52 @@
+@use '../util/variables.scss' as vars;
+
+.main {
+  display: flex;
+}
+.banner {
+  @include banner(
+    "../images/banner.jpg",
+    70vw,
+    vars.$clr-gray,
+    vars.$clr-accent,
+    vars.$font-white
+  );
+}
+
+nav {
+  @include navBar(
+    vars.$clr-gray,
+    vars.$clr-accent,
+    vars.$font-white,
+    vars.$font-dark
+  );
+}
+.card {
+  @include card(vars.$clr-gray, vars.$clr-accent, vars.$font-white);
+}
+.post {
+  @include post(
+    vars.$clr-gray,
+    vars.$clr-accent,
+    vars.$clr-white,
+    vars.$font-white
+  );
+}
+footer {
+  @include footer(
+    vars.$clr-gray,
+    vars.$clr-accent,
+    vars.$font-white,
+    vars.$font-dark
+  );
+}
+.hoverEffect {
+  @include hover(vars.$clr-gray);
+}
+@media screen and (max-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+  }
+}
