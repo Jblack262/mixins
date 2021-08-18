@@ -1,4 +1,4 @@
-@use '../util/variables.scss' as vars;
+@import "../themes/defaultTheme";
 
 .main {
   display: flex;
@@ -7,41 +7,26 @@
   @include banner(
     "../images/banner.jpg",
     70vw,
-    vars.$clr-gray,
-    vars.$clr-accent,
-    vars.$font-white
+    $clr-gray,
+    $clr-accent,
+    $font-white
   );
 }
 
 nav {
-  @include navBar(
-    vars.$clr-gray,
-    vars.$clr-accent,
-    vars.$font-white,
-    vars.$font-dark
-  );
+  @include navBar($clr-gray, $clr-accent, $font-white, $font-dark);
 }
 .card {
-  @include card(vars.$clr-gray, vars.$clr-accent, vars.$font-white);
+  @include card($clr-gray, $clr-accent, $font-white);
 }
 .post {
-  @include post(
-    vars.$clr-gray,
-    vars.$clr-accent,
-    vars.$clr-white,
-    vars.$font-white
-  );
+  @include post($clr-gray, $clr-accent, $clr-white, $font-white);
 }
 footer {
-  @include footer(
-    vars.$clr-gray,
-    vars.$clr-accent,
-    vars.$font-white,
-    vars.$font-dark
-  );
+  @include footer($clr-gray, $clr-accent, $font-white, $font-dark);
 }
 .hoverEffect {
-  @include hover(vars.$clr-gray);
+  @include hover($clr-gray);
 }
 @media screen and (max-width: 768px) {
   .main {
