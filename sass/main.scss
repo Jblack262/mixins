@@ -1,6 +1,10 @@
 @use 'themes/defaultTheme';
+
 @import "base/typography";
 
 @import "util/mixins";
+
+@import "layout/flexboxes";
+@import "layout/flexgrid";
 
 @import "pages/homepage";
